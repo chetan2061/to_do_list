@@ -1,96 +1,157 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do Dashboard</title>
+    <link rel="stylesheet" href="to_do.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do Dashboard</title>
-  <link rel="stylesheet" href="to_do.css">
-</head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <header class="greeting">
+          <div class="logo" aria-label="User Logo"></div>
+          <div>
+            <p>Good Morning</p>
+            <strong>CHETAN !</strong>
+          </div>
+        </header>
 
-<body>
-  <div class="container">
-    <aside class="sidebar">
-      <header class="greeting">
-        <div class="logo" aria-label="User Logo"></div>
-        <div>
-          <p>Good Morning</p>
-          <strong>CHETAN !</strong>
-        </div>
-      </header>
-
-      <section class="task-entry" aria-labelledby="task-entry-title">
-        <h2 id="task-entry-title" class="visually-hidden">Quick Task Entry</h2>
-        <button class="add-task" aria-label="Add new task">+ Add a Task</button>
-        <ul class="task-list">
-          <li><label><input type="radio" name="task"> Wireframe for contact page</label></li>
-          <li><label><input type="radio" name="task"> Book Return Ticket</label></li>
-          <li><label><input type="radio" name="task"> Buy Anniversary Gift</label></li>
-          <li><label><input type="radio" name="task"> Pay Electricity Bill</label></li>
-          <li><label><input type="radio" name="task"> Meet Chris in the Conference</label></li>
-        </ul>
-      </section>
-
-      <footer class="bottom-controls">
-        <button class="completed" aria-label="View completed tasks">Completed <span>&#x2B07;</span></button>
-        <label class="toggle-switch" aria-label="Toggle Light/Dark Mode">
-          <input type="checkbox">
-          <span class="slider"></span>
-        </label>
-      </footer>
-    </aside>
-
-    <main class="dashboard">
-      <header class="header">
-        <section class="date-info" aria-label="Date Info">
-          <h2>June 2025</h2>
-          <p>Today<br><strong>21, Sat</strong></p>
+        <section class="task-entry" aria-labelledby="task-entry-title">
+          <h2 id="task-entry-title" class="visually-hidden">
+            Quick Task Entry
+          </h2>
+          <button id="add-task-btn" class="add-task" aria-label="Add new task">
+            + Add a Task
+          </button>
+          <ul class="task-list" id="quick-task-list">
+            <li>
+              <label
+                ><input type="radio" name="task" /> Wireframe for contact
+                page</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="radio" name="task" /> Book Return Ticket</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="radio" name="task" /> Buy Anniversary Gift</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="radio" name="task" /> Pay Electricity Bill</label
+              >
+            </li>
+            <li>
+              <label
+                ><input type="radio" name="task" /> Meet Chris in the
+                Conference</label
+              >
+            </li>
+          </ul>
         </section>
 
-        <nav class="view-toggle" aria-label="View Mode Toggle">
-          <button class="active" aria-current="page">List</button>
-          <button>Calendar</button>
-        </nav>
+        <footer class="bottom-controls">
+          <button class="completed" aria-label="View completed tasks">
+            Completed <span>&#x2B07;</span>
+          </button>
+          <label class="toggle-switch" aria-label="Toggle Light/Dark Mode">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </footer>
+      </aside>
 
-        <form role="search" aria-label="Task Search">
-          <input type="search" placeholder="Search" class="search" aria-label="Search tasks">
-        </form>
-      </header>
+      <main class="dashboard">
+        <header class="header">
+          <section class="date-info" aria-label="Date Info">
+            <h2>June 2025</h2>
+            <p>Today<br /><strong>21, Sat</strong></p>
+          </section>
 
-      <section class="task-columns" aria-label="Task Boards">
-        <article class="column" aria-labelledby="todo-title">
-          <h3 id="todo-title">TO-DO</h3>
-          <ul>
-            <li><label><input type="checkbox"> Task 1</label></li>
-            <li><label><input type="checkbox"> Task 2</label></li>
-            <li><label><input type="checkbox"> Task 3 <span class="icon">⭐</span></label></li>
-            <li><label><input type="checkbox"> Task 4</label></li>
-          </ul>
-        </article>
+          <nav class="view-toggle" aria-label="View Mode Toggle">
+            <button class="active" aria-current="page">List</button>
+            <button>Calendar</button>
+          </nav>
 
-        <article class="column" aria-labelledby="doing-title-1">
-          <h3 id="doing-title-1">Doing</h3>
-          <ul>
-            <li><label><input type="checkbox"> Task 1</label></li>
-            <li><label><input type="checkbox"> Task 2</label></li>
-            <li><label><input type="checkbox"> Task 3</label></li>
-            <li><label><input type="checkbox"> Task 4</label></li>
-          </ul>
-        </article>
+          <form role="search" aria-label="Task Search">
+            <input
+              type="search"
+              placeholder="Search"
+              class="search"
+              aria-label="Search tasks"
+            />
+          </form>
+        </header>
 
-        <article class="column" aria-labelledby="doing-title-2">
-          <h3 id="doing-title-2">Doing</h3>
-          <ul>
-            <li><label><input type="checkbox"> Task 1</label></li>
-            <li><label><input type="checkbox"> Task 2</label></li>
-            <li><label><input type="checkbox"> Task 3</label></li>
-            <li><label><input type="checkbox"> Task 4</label></li>
-          </ul>
-        </article>
-      </section>
-    </main>
-  </div>
-</body>
+        <section class="task-columns" aria-label="Task Boards">
+          <article class="column" aria-labelledby="todo-title">
+            <h3 id="todo-title">TO-DO</h3>
+            <ul>
+              <li>
+                <label><input type="checkbox" /> Task 1</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 2</label>
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" /> Task 3
+                  <span class="icon">⭐</span></label
+                >
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 4</label>
+              </li>
+            </ul>
+          </article>
 
+          <article class="column" aria-labelledby="doing-title-1">
+            <h3 id="doing-title-1">Doing</h3>
+            <ul>
+              <li>
+                <label><input type="checkbox" /> Task 1</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 2</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 3</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 4</label>
+              </li>
+            </ul>
+          </article>
+
+          <article class="column" aria-labelledby="doing-title-2">
+            <h3 id="doing-title-2">Doing</h3>
+            <ul>
+              <li>
+                <label><input type="checkbox" /> Task 1</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 2</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 3</label>
+              </li>
+              <li>
+                <label><input type="checkbox" /> Task 4</label>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <!-- ✅ JavaScript Link -->
+    <script src="script.js"></script>
+  </body>
 </html>
